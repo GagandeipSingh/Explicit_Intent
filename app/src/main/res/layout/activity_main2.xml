@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity2">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎉 Submitted Profile"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#3F51B5"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- CardView container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDisplay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="12dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <!-- Username -->
+            <ImageView
+                android:id="@+id/iconUsername"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="24dp"
+                android:src="@android:drawable/ic_menu_myplaces"
+                app:tint="#3F51B5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/labelUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username:"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                
+                app:layout_constraintStart_toEndOf="@id/iconUsername"
+                app:layout_constraintTop_toTopOf="@id/iconUsername"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/valueUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textSize="20sp"
+                android:textColor="#444444"
+                app:layout_constraintStart_toEndOf="@id/labelUsername"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/labelUsername"
+                android:layout_marginStart="8dp"/>
+
+            <!-- Age -->
+            <ImageView
+                android:id="@+id/iconAge"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_recent_history"
+                app:tint="#3F51B5"
+                app:layout_constraintTop_toBottomOf="@id/iconUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:id="@+id/labelAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age:"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                
+                app:layout_constraintTop_toTopOf="@id/iconAge"
+                app:layout_constraintStart_toEndOf="@id/iconAge"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/valueAge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textSize="20sp"
+                android:textColor="#444444"
+                app:layout_constraintStart_toEndOf="@id/labelAge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/labelAge"
+                android:layout_marginStart="8dp"/>
+
+            <!-- Country -->
+            <ImageView
+                android:id="@+id/iconCountry"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_mapmode"
+                app:tint="#3F51B5"
+                app:layout_constraintTop_toBottomOf="@id/iconAge"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:id="@+id/labelCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country:"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                
+                app:layout_constraintTop_toTopOf="@id/iconCountry"
+                app:layout_constraintStart_toEndOf="@id/iconCountry"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/valueCountry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textSize="20sp"
+                android:textColor="#444444"
+                app:layout_constraintStart_toEndOf="@id/labelCountry"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/labelCountry"
+                android:layout_marginStart="8dp"/>
+
+            <!-- Color -->
+            <ImageView
+                android:id="@+id/iconColor"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_edit"
+                app:tint="#3F51B5"
+                app:layout_constraintTop_toBottomOf="@id/iconCountry"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:id="@+id/labelColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Color:"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                
+                app:layout_constraintTop_toTopOf="@id/iconColor"
+                app:layout_constraintStart_toEndOf="@id/iconColor"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/valueColor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textSize="20sp"
+                android:textColor="#444444"
+                app:layout_constraintStart_toEndOf="@id/labelColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/labelColor"
+                android:layout_marginStart="8dp"/>
+
+            <!-- Occupation -->
+            <ImageView
+                android:id="@+id/iconOccupation"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_manage"
+                app:tint="#3F51B5"
+                app:layout_constraintTop_toBottomOf="@id/iconColor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:id="@+id/labelOccupation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Occupation:"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                
+                app:layout_constraintTop_toTopOf="@id/iconOccupation"
+                app:layout_constraintStart_toEndOf="@id/iconOccupation"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/valueOccupation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textSize="20sp"
+                android:textColor="#444444"
+                app:layout_constraintStart_toEndOf="@id/labelOccupation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/labelOccupation"
+                android:layout_marginStart="8dp"/>
+
+            <!-- Hobby -->
+            <ImageView
+                android:id="@+id/iconHobby"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="24dp"
+                android:src="@android:drawable/ic_menu_compass"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconOccupation"
+                app:tint="#3F51B5" />
+
+            <TextView
+                android:id="@+id/labelHobby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hobby:"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                
+                app:layout_constraintTop_toTopOf="@id/iconHobby"
+                app:layout_constraintStart_toEndOf="@id/iconHobby"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/valueHobby"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textSize="20sp"
+                android:textColor="#444444"
+                app:layout_constraintStart_toEndOf="@id/labelHobby"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/labelHobby"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
