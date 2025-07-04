@@ -55,24 +55,28 @@
         app:layout_constraintTop_toBottomOf="@id/progTxt">
 
         <CheckBox
+            android:id="@+id/chkBoxC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:text="C"/>
 
         <CheckBox
+            android:id="@+id/chKBoxCpp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:text="C++"/>
 
         <CheckBox
+            android:id="@+id/chkBoxKotlin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:text="Kotlin"/>
 
         <CheckBox
+            android:id="@+id/chkBoxJava"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"

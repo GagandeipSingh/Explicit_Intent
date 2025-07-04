@@ -1,7 +1,9 @@
 package com.example.explicit_intent
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
@@ -22,20 +24,47 @@ class MainActivity3 : AppCompatActivity() {
             insets
         }
 
+        var langList = arrayListOf<String>()
+        var selectedTxt = ""
+
         val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
         val printBtn = findViewById<Button>(R.id.printBtn)
 
+        val chkBoxC = findViewById<CheckBox>(R.id.chkBoxC)
+        val chkBoxCpp = findViewById<CheckBox>(R.id.chKBoxCpp)
+        val chkBoxKotlin = findViewById<CheckBox>(R.id.chkBoxKotlin)
+        val chkBoxJava = findViewById<CheckBox>(R.id.chkBoxJava)
+
         printBtn.setOnClickListener {
-            val checkedRadioBtnId = radioGroup.checkedRadioButtonId
-            println("Edrr $checkedRadioBtnId")
-            if(checkedRadioBtnId == -1){
-                println("Edrr Select Krr")
-                Toast.makeText(this,"Select One Option", Toast.LENGTH_LONG).show()
+            langList = arrayListOf()
+            val checkedId = radioGroup.checkedRadioButtonId
+            if(checkedId == -1){
+                Toast.makeText(this,"Select Any Option..", Toast.LENGTH_SHORT).show()
             } else{
-                val checkedRadioBtn = findViewById<RadioButton>(checkedRadioBtnId)
-                val checkedOption = checkedRadioBtn.text
-                println("Edrr $checkedOption")
+                val selectedRadioBtn = findViewById<RadioButton>(checkedId)
+                selectedTxt = selectedRadioBtn.text.toString()
             }
+
+            if(chkBoxC.isChecked){
+                langList.add("C")
+            }
+            if(chkBoxCpp.isChecked){
+                langList.add("Cpp")
+            }
+            if(chkBoxKotlin.isChecked){
+                langList.add("Kotlin")
+            }
+            if(chkBoxJava.isChecked){
+                langList.add("Java")
+            }
+
+            println("Edrr $selectedTxt $langList")
+
+
+            val intent = Intent(this, MainActivity5::class.java)
+            intent.putExtra("gender",selectedTxt)
+            intent.putStringArrayListExtra("langList",langList)
+            startActivity(intent)
 
         }
 
