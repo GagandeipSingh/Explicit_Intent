@@ -27,6 +27,18 @@ class MainActivity4 : AppCompatActivity() {
         etCity = findViewById(R.id.etCity)
         rgGender = findViewById(R.id.rgGender)
         btnSubmit = findViewById(R.id.btnSubmit)
+        val dropDown = findViewById<AutoCompleteTextView>(R.id.colorsDropDown)
+
+        val items = arrayListOf<String>()
+        items.add("Red")
+        items.add("Blue")
+        items.add("Black")
+        items.add("Brown")
+        items.add("White")
+
+        val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,items)
+
+        dropDown.setAdapter(adapter)
 
         btnSubmit.setOnClickListener {
             val name = etName.text.toString().trim()
@@ -34,6 +46,7 @@ class MainActivity4 : AppCompatActivity() {
             val email = etEmail.text.toString().trim()
             val phone = etPhone.text.toString().trim()
             val city = etCity.text.toString().trim()
+            val colour = dropDown.text.toString().trim()
 
             val genderId = rgGender.checkedRadioButtonId
             val gender = if (genderId != -1) {
